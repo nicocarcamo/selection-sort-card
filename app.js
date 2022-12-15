@@ -83,15 +83,17 @@ drawButton.addEventListener('click', () => {
 });
 
 
-const bubbleSort = cards => {
-  let stop = cards.length - 1;
 
-  for (let i = 0; i <= stop; i++) {
-    for (let j = 0; j <= stop; j++) {
-      if (parseInt(cards[j]) > parseInt(cards[j + 1])) {
-        let aux = cards[j];
-        cards[j] = cards[j + 1];
-        cards[j + 1] = aux;
+const selectionSort = cards => {
+
+  let min = 0;
+  while (min < cards.length - 1) {
+    for (let i = min + 1; i < cards.length; i++) {
+      if (parseInt(cards[min]) > parseInt(cards[i])) {
+        let aux = cards[min];
+        cards[min] = cards[i];
+        cards[i] = aux;
+
 
         let iterationContainer = document.createElement('div');
         iterationContainer.classList.add('iteration-container');
@@ -128,7 +130,9 @@ const bubbleSort = cards => {
 
         sortContainer.appendChild(iterationContainer);
       }
+
     }
+    min++;
   }
 
   return cards;
@@ -138,5 +142,5 @@ const bubbleSort = cards => {
 sortButton.addEventListener('click', () => {
 
   clearSort();
-  bubbleSort(cardArray);
+  selectionSort(cardArray);
 });
