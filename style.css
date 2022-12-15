@@ -18,29 +18,3 @@ body {
   font-size: 30px;
   line-height: 1;
 }
-
-/* .card:before,
-.card:after {
-  position: absolute;
-  font-size: 20px;
-}
-
-.card:before {
-  top: 10px;
-  left: 10px;
-}
-
-.card:after {
-  bottom: 10px;
-  right: 10px;
-}
-
-.card.hearts:before,
-.card.diamonds:after {
-  color: red;
-}
-
-.card.clubs:before,
-.card.spades:after {
-  color: black;
-} */
